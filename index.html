@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مختبرات مدرسة الطويين - نظام إدارة المختبرات العلمية</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- شريط التنقل -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#home">
+                <i class="fas fa-flask me-2"></i>
+                مختبرات مدرسة الطويين
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">الرئيسية</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#experiments">طلب التجارب</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#schedule">الجدول الأسبوعي</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#forms">النماذج</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#reports">التقارير</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">التواصل</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- القسم الرئيسي -->
+    <section id="home" class="hero-section">
+        <div class="container">
+            <div class="row align-items-center min-vh-100">
+                <div class="col-lg-6">
+                    <div class="hero-content">
+                        <h1 class="display-4 fw-bold text-white mb-4">
+                            مختبرات مدرسة الطويين
+                        </h1>
+                        <p class="lead text-white-50 mb-4">
+                            نظام إدارة المختبرات العلمية - منصة شاملة لإدارة المختبرات وتنظيم التجارب والتواصل مع معلمات العلوم
+                        </p>
+                        <div class="d-flex gap-3">
+                            <a href="#experiments" class="btn btn-light btn-lg">
+                                <i class="fas fa-vial me-2"></i>
+                                طلب تجربة
+                            </a>
+                            <a href="#schedule" class="btn btn-outline-light btn-lg">
+                                <i class="fas fa-calendar me-2"></i>
+                                عرض الجدول
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="hero-image">
+                        <i class="fas fa-microscope hero-icon"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم الخدمات -->
+    <section id="services" class="py-5 bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center mb-5">
+                    <h2 class="display-5 fw-bold">خدماتنا</h2>
+                    <p class="lead text-muted">نوفر مجموعة شاملة من الخدمات لإدارة المختبرات العلمية</p>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3">
+                    <div class="service-card text-center p-4">
+                        <div class="service-icon mb-3">
+                            <i class="fas fa-vial"></i>
+                        </div>
+                        <h5>طلب التجارب</h5>
+                        <p class="text-muted">طلب التجارب العلمية وحجز المختبرات بسهولة</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="service-card text-center p-4">
+                        <div class="service-icon mb-3">
+                            <i class="fas fa-calendar-alt"></i>
+                        </div>
+                        <h5>الجدولة</h5>
+                        <p class="text-muted">تنظيم الجداول الأسبوعية لاستخدام المختبرات</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="service-card text-center p-4">
+                        <div class="service-icon mb-3">
+                            <i class="fas fa-file-alt"></i>
+                        </div>
+                        <h5>النماذج</h5>
+                        <p class="text-muted">إدارة النماذج والتعهدات والتقارير</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="service-card text-center p-4">
+                        <div class="service-icon mb-3">
+                            <i class="fas fa-chart-bar"></i>
+                        </div>
+                        <h5>التقارير</h5>
+                        <p class="text-muted">تقارير شاملة عن أنشطة المختبرات</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم طلب التجارب -->
+    <section id="experiments" class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center mb-5">
+                    <h2 class="display-5 fw-bold">طلب التجارب العلمية</h2>
+                    <p class="lead text-muted">قم بطلب التجارب العلمية وحجز المختبرات</p>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="card shadow-lg">
+                        <div class="card-body p-5">
+                            <form id="experimentForm">
+                                <div class="row g-3">
+                                    <div class="col-md-6">
+                                        <label for="teacherName" class="form-label">اسم المعلمة</label>
+                                        <input type="text" class="form-control" id="teacherName" required>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="subject" class="form-label">المادة العلمية</label>
+                                        <select class="form-select" id="subject" required>
+                                            <option value="">اختر المادة</option>
+                                            <option value="كيمياء">كيمياء</option>
+                                            <option value="فيزياء">فيزياء</option>
+                                            <option value="أحياء">أحياء</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="gradeLevel" class="form-label">الصف</label>
+                                        <select class="form-select" id="gradeLevel" required>
+                                            <option value="">اختر الصف</option>
+                                            <option value="9">الصف التاسع</option>
+                                            <option value="10">الصف العاشر</option>
+                                            <option value="11">الصف الحادي عشر</option>
+                                            <option value="12">الصف الثاني عشر</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="studentCount" class="form-label">عدد الطلاب</label>
+                                        <input type="number" class="form-control" id="studentCount" min="1" max="30" required>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="experimentDate" class="form-label">تاريخ التجربة</label>
+                                        <input type="date" class="form-control" id="experimentDate" required>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="experimentTime" class="form-label">وقت التجربة</label>
+                                        <select class="form-select" id="experimentTime" required>
+                                            <option value="">اختر الحصة</option>
+                                            <option value="1">الحصة الأولى (8:00-8:45)</option>
+                                            <option value="2">الحصة الثانية (8:45-9:30)</option>
+                                            <option value="3">الحصة الثالثة (9:50-10:35)</option>
+                                            <option value="4">الحصة الرابعة (10:35-11:20)</option>
+                                            <option value="5">الحصة الخامسة (11:40-12:25)</option>
+                                            <option value="6">الحصة السادسة (12:25-1:10)</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-12">
+                                        <label for="experimentName" class="form-label">اسم التجربة</label>
+                                        <input type="text" class="form-control" id="experimentName" required>
+                                    </div>
+                                    <div class="col-12">
+                                        <label for="experimentNotes" class="form-label">ملاحظات إضافية</label>
+                                        <textarea class="form-control" id="experimentNotes" rows="3"></textarea>
+                                    </div>
+                                    <div class="col-12 text-center">
+                                        <button type="submit" class="btn btn-primary btn-lg">
+                                            <i class="fas fa-paper-plane me-2"></i>
+                                            إرسال الطلب
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم الجدول الأسبوعي -->
+    <section id="schedule" class="py-5 bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center mb-5">
+                    <h2 class="display-5 fw-bold">الجدول الأسبوعي للمختبرات</h2>
+                    <p class="lead text-muted">عرض الجدول الأسبوعي لاستخدام المختبرات العلمية</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <div class="card shadow-lg">
+                        <div class="card-header bg-primary text-white">
+                            <h5 class="mb-0">
+                                <i class="fas fa-calendar-week me-2"></i>
+                                جدول مختبر الكيمياء - الأسبوع الحالي
+                            </h5>
+                        </div>
+                        <div class="card-body p-0">
+                            <div class="table-responsive">
+                                <table class="table table-bordered mb-0" id="scheduleTable">
+                                    <thead class="table-dark">
+                                        <tr>
+                                            <th>الحصة</th>
+                                            <th>الاثنين</th>
+                                            <th>الثلاثاء</th>
+                                            <th>الأربعاء</th>
+                                            <th>الخميس</th>
+                                            <th>الجمعة</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="fw-bold">الأولى</td>
+                                            <td class="available">متاح</td>
+                                            <td class="occupied">عام 9/أ</td>
+                                            <td class="available">متاح</td>
+                                            <td class="occupied">متقدم 11/ب</td>
+                                            <td class="available">متاح</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="fw-bold">الثانية</td>
+                                            <td class="occupied">متقدم 12/أ</td>
+                                            <td class="available">متاح</td>
+                                            <td class="occupied">عام 10/ج</td>
+                                            <td class="available">متاح</td>
+                                            <td class="occupied">عام 9/ب</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="fw-bold">الثالثة</td>
+                                            <td class="available">متاح</td>
+                                            <td class="occupied">متقدم 11/أ</td>
+                                            <td class="available">متاح</td>
+                                            <td class="occupied">عام 10/أ</td>
+                                            <td class="available">متاح</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="fw-bold">الرابعة</td>
+                                            <td class="occupied">عام 9/ج</td>
+                                            <td class="available">متاح</td>
+                                            <td class="occupied">متقدم 12/ب</td>
+                                            <td class="available">متاح</td>
+                                            <td class="occupied">متقدم 11/ج</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="fw-bold">الخامسة</td>
+                                            <td class="available">متاح</td>
+                                            <td class="occupied">عام 10/ب</td>
+                                            <td class="available">متاح</td>
+                                            <td class="occupied">عام 9/د</td>
+                                            <td class="available">متاح</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="fw-bold">السادسة</td>
+                                            <td class="occupied">متقدم 12/ج</td>
+                                            <td class="available">متاح</td>
+                                            <td class="occupied">عام 11/أ</td>
+                                            <td class="available">متاح</td>
+                                            <td class="available">متاح</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم النماذج -->
+    <section id="forms" class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center mb-5">
+                    <h2 class="display-5 fw-bold">النماذج والتقارير</h2>
+                    <p class="lead text-muted">الوصول إلى النماذج المختلفة المطلوبة لإدارة المختبرات</p>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4">
+                    <div class="form-card">
+                        <div class="form-icon">
+                            <i class="fas fa-file-contract"></i>
+                        </div>
+                        <h5>تعهد خلو المختبرات</h5>
+                        <p class="text-muted">نموذج تعهد خلو المختبرات من المواد الكيميائية منتهية الصلاحية</p>
+                        <button class="btn btn-outline-primary" onclick="openForm('commitment')">
+                            <i class="fas fa-edit me-2"></i>
+                            ملء النموذج
+                        </button>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="form-card">
+                        <div class="form-icon">
+                            <i class="fas fa-exchange-alt"></i>
+                        </div>
+                        <h5>نقل الأصول</h5>
+                        <p class="text-muted">نموذج نقل الأصول بين المدارس والمباني</p>
+                        <button class="btn btn-outline-primary" onclick="openForm('assets')">
+                            <i class="fas fa-edit me-2"></i>
+                            ملء النموذج
+                        </button>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="form-card">
+                        <div class="form-icon">
+                            <i class="fas fa-vials"></i>
+                        </div>
+                        <h5>حصر المواد الكيميائية</h5>
+                        <p class="text-muted">نموذج حصر وتسجيل المواد الكيميائية في المختبر</p>
+                        <button class="btn btn-outline-primary" onclick="openForm('chemicals')">
+                            <i class="fas fa-edit me-2"></i>
+                            ملء النموذج
+                        </button>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="form-card">
+                        <div class="form-icon">
+                            <i class="fas fa-chair"></i>
+                        </div>
+                        <h5>تقرير حالة الأثاث</h5>
+                        <p class="text-muted">تقرير حالة أثاث المختبرات في حال الاستبدال أو الطلب</p>
+                        <button class="btn btn-outline-primary" onclick="openForm('furniture')">
+                            <i class="fas fa-edit me-2"></i>
+                            ملء النموذج
+                        </button>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="form-card">
+                        <div class="form-icon">
+                            <i class="fas fa-tasks"></i>
+                        </div>
+                        <h5>الخطة التشغيلية</h5>
+                        <p class="text-muted">إدارة الخطة التشغيلية للمختبر والمهام المطلوبة</p>
+                        <button class="btn btn-outline-primary" onclick="openForm('plan')">
+                            <i class="fas fa-edit me-2"></i>
+                            ملء النموذج
+                        </button>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="form-card">
+                        <div class="form-icon">
+                            <i class="fas fa-calendar-check"></i>
+                        </div>
+                        <h5>الجدول الأسبوعي</h5>
+                        <p class="text-muted">إنشاء وتعديل الجدول الأسبوعي لاستخدام المختبرات</p>
+                        <button class="btn btn-outline-primary" onclick="openForm('weekly')">
+                            <i class="fas fa-edit me-2"></i>
+                            ملء النموذج
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم التقارير -->
+    <section id="reports" class="py-5 bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center mb-5">
+                    <h2 class="display-5 fw-bold">التقارير والإحصائيات</h2>
+                    <p class="lead text-muted">عرض التقارير والإحصائيات الخاصة بأنشطة المختبرات</p>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3">
+                    <div class="stats-card">
+                        <div class="stats-icon">
+                            <i class="fas fa-vial"></i>
+                        </div>
+                        <div class="stats-content">
+                            <h3>45</h3>
+                            <p>طلبات التجارب هذا الشهر</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="stats-card">
+                        <div class="stats-icon">
+                            <i class="fas fa-calendar-check"></i>
+                        </div>
+                        <div class="stats-content">
+                            <h3>28</h3>
+                            <p>تجربة منفذة</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="stats-card">
+                        <div class="stats-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div class="stats-content">
+                            <h3>12</h3>
+                            <p>معلمة نشطة</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="stats-card">
+                        <div class="stats-icon">
+                            <i class="fas fa-flask"></i>
+                        </div>
+                        <div class="stats-content">
+                            <h3>3</h3>
+                            <p>مختبرات متاحة</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم التواصل -->
+    <section id="contact" class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center mb-5">
+                    <h2 class="display-5 fw-bold">التواصل معنا</h2>
+                    <p class="lead text-muted">للاستفسارات والدعم الفني</p>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="row g-4">
+                        <div class="col-md-4 text-center">
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <i class="fas fa-phone"></i>
+                                </div>
+                                <h5>الهاتف</h5>
+                                <p>+971-XX-XXXXXXX</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4 text-center">
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <h5>البريد الإلكتروني</h5>
+                                <p>lab@school.ae</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4 text-center">
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <h5>الموقع</h5>
+                                <p>مدرسة الطويين الحلقة الثانية والثالثة بنات</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- التذييل -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <p class="mb-0">&copy; 2024 مختبرات مدرسة الطويين. جميع الحقوق محفوظة.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- النوافذ المنبثقة للنماذج -->
+    <div class="modal fade" id="formModal" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="formModalTitle">النموذج</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body" id="formModalBody">
+                    <!-- محتوى النموذج سيتم إدراجه هنا -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+
